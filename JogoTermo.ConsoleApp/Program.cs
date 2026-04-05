@@ -14,7 +14,7 @@ class Program
             "PROVA", "SABER", "VIVER", "FORTE", "PONTO", 
             "LUGAR", "FALAR", "MENTE", "NOITE", "PORTA", 
             "PLANO", "BRISA", "CALOR", "MUNDO", "PRATO",
-            "TREINO", "CORTE", "GRITO", "RADIO", "MOSCA"
+            "TREINO", "LIVRO", "CAIXA", "RADIO", "CARRO"
         };
 
         // Sorteia a palavra secreta
