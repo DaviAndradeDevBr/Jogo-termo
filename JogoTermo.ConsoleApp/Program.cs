@@ -97,5 +97,28 @@ class Program
             tentativaAtual++;
     
         }
+
+        // 5. Finalização
+        Console.Clear();
+        if (venceu)
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("============================================");
+            Console.WriteLine("        PARABÉNS, VOCÊ VENCEU!              ");
+            Console.WriteLine("============================================");
+            Console.ResetColor();
+        }
+        else
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("============================================");
+            Console.WriteLine("        FIM DE JOGO! VOCÊ PERDEU.           ");
+            Console.WriteLine("============================================");
+            Console.ResetColor(); 
+        }
+
+        Console.WriteLine($"A palavra secreta era: {palavraSecreta}");
+        Console.WriteLine("\nObrigado por jogar! Pressione qualquer tecla para sair...");
+        Console.ReadKey();
     }   
 }
