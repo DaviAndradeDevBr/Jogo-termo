@@ -51,6 +51,50 @@ class Program
                 continue; // Volta para o início do while sem gastar tentativa
             }
 
+            // 4. Lógica de comparação e feedback
+            for (int i = 0; i < 5; i++)
+            {
+                char letraPalpite = palpite[i];
+                char letraSecreta = palavraSecreta[i];
+
+                if (letraPalpite == letraSecreta)
+                {
+                    // Letra na posição correta (Verde)
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                }
+                else if (palavraSecreta.Contains(letraPalpite))
+                {
+                    // Letra existe, mas em posição errada (Amarelo)
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                }
+                else
+                {
+                    // Letra não existe na palavra (Vermelho)
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
+
+                Console.Write($" {letraPalpite} ");
+                Console.ResetColor();
+                Console.Write(" "); 
+            }
+
+            Console.WriteLine("\n");
+
+            // Verifica se acertou a palavra toda
+            if (palpite == palavraSecreta)
+            {
+                venceu = true;
+            }
+            else
+            {
+                Console.WriteLine("Pressione qualquer tecla para a próxima tentativa...");
+                Console.ReadKey();
+            }
+
+            tentativaAtual++;
     
         }
     }   
